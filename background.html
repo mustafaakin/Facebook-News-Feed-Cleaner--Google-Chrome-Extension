@@ -1,0 +1,16 @@
+<html>
+<head>
+<script src="jquery-1.4.2.min.js"> </script>
+<script language="javascript">
+$(document).ready(function(){
+    chrome.extension.onRequest.addListener(function(request, sender, sendResponse) {
+        if (request.method == "getList")
+            sendResponse({status: localStorage['list']});
+        else
+            sendResponse({});
+        });
+});
+</script>
+</head>
+</body>
+</html>

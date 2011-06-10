@@ -1,0 +1,20 @@
+﻿{
+  "name": "Facebook News Feed Cleaner",
+  "version": "0.1",
+  "description": "Cleans your Facebook news feed from unwanted posts. Pretty useful if people annoy you.",
+  "icons": { "32": "icon32.png",	
+			 "48": "icon48.png",
+             "128": "icon128.png"},
+  "content_scripts": [
+    {
+      "matches": ["http://www.facebook.com/*"],
+      "js": ["jquery-1.4.2.min.js", "content.js"]
+    }
+  ],
+  "browser_action": {
+    "default_icon": "icon48.png",
+    "default_title": "Blocker",      
+    "default_popup": "popup.html"
+  },
+  "background_page":"background.html"
+}
